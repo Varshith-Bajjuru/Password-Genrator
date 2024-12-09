@@ -59,7 +59,7 @@ function App() {
             <input
               type="checkbox"
               checked={numberAllowed}
-              onChange={(e) => setPermissionN(e.target.checked)}
+              onChange={() => setPermissionN((prev)=> !prev)}
               className="accent-violet-600"
             />
             Include Numbers
@@ -68,7 +68,7 @@ function App() {
             <input
               type="checkbox"
               checked={charAllowed}
-              onChange={(e) => setPermissionC(e.target.checked)}
+              onChange={() => setPermissionC((prev)=> !prev)}
               className="accent-violet-600"
             />
             Include Special Characters
